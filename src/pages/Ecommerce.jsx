@@ -4,12 +4,13 @@ import React from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot }  from 'react-icons/go';
 
-import { Stacked, Pie, Button, SparkLine } from '../components';
+import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
 import { earningData, SparklineAreaData, ecomPieChartDat } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
 
 const Ecommerce = () => {
+
   return (
     <div className='mt-12'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
@@ -94,7 +95,7 @@ const Ecommerce = () => {
               <div className='mt-5'>
                 <SparkLine
                   currentColor='blue'
-                  id='line-sparkline'
+                  id='line-sparkLine'
                   type='Line'
                   height='80px'
                   width='250px'
