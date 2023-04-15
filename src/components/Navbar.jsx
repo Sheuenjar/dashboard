@@ -28,7 +28,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, isClicked, setIsClicked, screenSize, setScreenSize, currentColor } = useStateContext();
+  const { activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, screenSize, setScreenSize, currentColor } = useStateContext();
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -82,7 +82,7 @@ const Navbar = () => {
         <TooltipComponent content='Profile' position='BottomCenter'>
           <div 
             className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
-            onClick={() => setIsClicked('userProfile')}
+            onClick={() => handleClick('userProfile')}
           >
             <img className='rounded-full w-8 h-8' src={avatar}/>
             <p>
